@@ -44,7 +44,8 @@ var view = new y.View({
 		filterOn:''
 	}
 })
-// filter 'myArr' with RQL expression interpolated with 'filterOn' values (from context) and store result in 'myFilteredArr'
+// filter 'myArr' with RQL expression interpolated with 'filterOn' values (from context) 
+// and store result in 'myFilteredArr'
 .rql('myArr', 'myFilteredArr', 'title=match={{ filterOn }}')
 // produce input that is binded to 'filterOn'
 .input('text', '{{ filterOn }}')
@@ -62,7 +63,9 @@ myProp.foo=gt=2&sort(-address.zip,+rating)&limit({{ itemPerPage }},{{ startFrom 
 
 ## As expression filter
 
+```javascript
 var template = y().p('{{ myArr | rql("myProp=3&myVar=lt=8") }}');
+```
 
 ## Licence
 
