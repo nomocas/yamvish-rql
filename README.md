@@ -1,6 +1,6 @@
 # yamvish-rql
 
-RQL Array filtering, sorting and paging plugins for [yamvish](https://github.com/nomocas/yamvish).
+RQL Array filtering, sorting and paging plugin for [yamvish](https://github.com/nomocas/yamvish).
 
 ## install
 
