@@ -1,0 +1,29 @@
+{
+  "name": "yamvish-rql",
+  "version": "0.1.0",
+  "description": "array filtering, sorting and paging with rql for yamvish",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomocas/yamvish-rql.git"
+  },
+  "keywords": [
+    "yamvish",
+    "filtering",
+    "sorting",
+    "paging",
+    "rql"
+  ],
+  "author": "Gilles Coomans <gilles.coomans@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomocas/yamvish-rql/issues"
+  },
+  "homepage": "https://github.com/nomocas/yamvish-rql#readme",
+  "dependencies": {
+    "orql": "^0.1.0"
+  }
+}
