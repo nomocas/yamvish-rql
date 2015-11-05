@@ -48,6 +48,7 @@ var view = new y.View({
 .each('myFilteredArr', y().p('{{ title }}'))
 // mount view somewhere
 .mount('aSelector');
+```
 
 ## RQL example with filtering and sorting then paging
 
