@@ -1,6 +1,6 @@
 # yamvish-rql
 
-RQL Array filtering, sorting and paging plugin for [yamvish](https://github.com/nomocas/yamvish).
+[RQL](https://github.com/persvr/rql) Array filtering, sorting and paging plugin for [yamvish](https://github.com/nomocas/yamvish).
 
 ## install
 
@@ -17,7 +17,11 @@ require('yamvish-rql');
 
 var view = new y.View({
 	data:{
-		myArr : [{ title:'hello', flag:true }, { title:'world', flag:true }, { title:'helicopter', flag:false }]
+		myArr : [
+			{ title:'hello', flag:true }, 
+			{ title:'world', flag:true },
+			{ title:'helicopter', flag:false }
+		]
 	}
 })
 // filter 'myArr' (from context of course) with RQL and store result in 'myFilteredArr' (in context of course)
