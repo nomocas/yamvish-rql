@@ -30,9 +30,10 @@
 	};
 
 	y.Filter.prototype.rql = function(query) {
-		return this.done(function(input) {
+		this._queue.push(function(input) {
 			return rql(input, query);
 		});
+		return this;
 	};
 
 	module.exports = rql;
