@@ -61,6 +61,8 @@ var view = new y.View({
 myProp.foo=gt=2&sort(-address.zip,+rating)&limit({{ itemPerPage }},{{ startFrom }})
 ```
 
+[More info](https://github.com/persvr/rql) on RQL syntax.
+
 ## As expression filter
 
 ```javascript
