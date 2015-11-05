@@ -44,7 +44,7 @@ var view = new y.View({
 		filterOn:''
 	}
 })
-// filter 'myArr' with RQL interpolated with 'filterOn' values (from context) and store result in 'myFilteredArr'
+// filter 'myArr' with RQL expression interpolated with 'filterOn' values (from context) and store result in 'myFilteredArr'
 .rql('myArr', 'myFilteredArr', 'title=match={{ filterOn }}')
 // produce input that is binded to 'filterOn'
 .input('text', '{{ filterOn }}')
