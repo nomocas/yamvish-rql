@@ -9,21 +9,21 @@
 	y.Template.prototype.rql = function(path, name, expr) {
 		return this.exec(function(context) {
 			context.rql(path, name, expr);
-		}, true);
+		}, null, true);
 	};
 
-	y.View.prototype.rql = y.Context.prototype.rql = function(path, name, expr) {
+	y.Context.prototype.rql = function(path, name, expr) {
 		expr = y.interpolable(expr);
 		this.data[name] = [];
 		var self = this;
-		this.subscribe(path, function(type, p, value, key) {
+		this.subscribe(path, function(value, type) {
 			value = (type === 'push' || type === 'removeAt') ? self.get(path) : value;
 			var r = rql(value, expr.__interpolable__ ? expr.output(self) : expr);
 			self.set(name, r);
 		});
 		this.set(name, rql(this.get(path), expr.__interpolable__ ? expr.output(self) : expr));
 		if (expr.__interpolable__)
-			expr.subscribeTo(this, function(type, p, xpr) {
+			expr.subscribeTo(this, function(xpr) {
 				self.set(name, rql(self.get(path), xpr));
 			});
 		return this;
