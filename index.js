@@ -7,9 +7,9 @@
 	y.rql = rql;
 
 	y.Template.prototype.rql = function(path, name, expr) {
-		return this.exec(function(context) {
+		return this.context(function(context) {
 			context.rql(path, name, expr);
-		}, null, true);
+		});
 	};
 
 	y.Context.prototype.rql = function(path, name, expr) {
