@@ -1,6 +1,6 @@
 {
   "name": "yamvish-rql",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "array filtering, sorting and paging with rql for yamvish",
   "main": "index.js",
   "scripts": {
