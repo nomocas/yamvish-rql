@@ -21,10 +21,14 @@
 			var r = rql(value, expr.__interpolable__ ? expr.output(self) : expr);
 			self.set(name, r);
 		});
-		this.set(name, rql(this.get(path), expr.__interpolable__ ? expr.output(self) : expr));
+		var data = this.get(path);
+		if (data)
+			this.set(name, rql(data, expr.__interpolable__ ? expr.output(self) : expr));
 		if (expr.__interpolable__)
 			expr.subscribeTo(this, function(xpr) {
-				self.set(name, rql(self.get(path), xpr));
+				var data = self.get(path);
+				if (data)
+					self.set(name, rql(data, xpr));
 			});
 		return this;
 	};
