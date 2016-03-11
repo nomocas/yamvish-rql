@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/nomocas/yamvish-rql#readme",
   "dependencies": {
-    "orql": "^0.1.0"
+    "orql": "^0.2.0"
   }
 }
