@@ -29,7 +29,7 @@
 				var data = self.get(path);
 				if (data)
 					self.set(name, rql(data, xpr));
-			});
+			}, this.binds);
 		return this;
 	};
 
